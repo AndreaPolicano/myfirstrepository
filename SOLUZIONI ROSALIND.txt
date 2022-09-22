@@ -1,0 +1,812 @@
+1) INTRODUCTION : 
+
+my_seq = list('')
+A = my_seq.count('A')
+G = my_seq.count('G')
+T = my_seq.count('T')
+C = my_seq.count('C')
+
+
+
+print(A,C,G,T)   
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2)  RNA :
+
+my_seq = list('')
+
+for index, value in enumerate(my_seq):
+    if value == 'T':
+        my_seq[index] = 'U'
+rna_seq = ''.join(my_seq)
+
+print(rna_seq)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3)   REVC:
+
+my_seq = list('')
+
+my_seq.reverse()
+
+
+
+for index, value in enumerate(my_seq):
+    if value == 'T':
+        my_seq[index] = 'A'
+    elif value == 'C':
+        my_seq[index] = 'G'
+    elif value == 'G':
+        my_seq[index] = 'C'
+    elif value == 'A':
+        my_seq[index] = 'T'
+comp_seq = ''.join(my_seq)
+
+print(comp_seq)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+4)    HAMM:
+
+seq1 = ''
+seq2 = ''
+
+Counter = 0
+n = len(seq_1)
+x = 0
+
+
+for x in range(0,n-1):
+    if seq_1[x] == seq_2[x]:
+        x += 1
+    else :
+        Counter += 1
+        x += 1
+print(Counter)
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+5)  SUBS:
+
+
+
+seq1 = ''
+sub_string = ''
+
+n = len(seq1)
+pos = set()
+index_pos = 0
+
+
+while  True:
+    position = seq1.find(sub_string, index_pos, n)
+    if position == -1:
+        break
+    index_pos += 1
+    pos.add(position)
+
+print(pos)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+6)FIBONACCI'S SEQ
+
+
+def _fibseq_(n, k):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    else:
+        return _fibseq_(n-1,k) + k * _fibseq_(n-2,k)
+print(_fibseq_(28,3))
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+7)PERM
+
+from itertools import permutations
+import re
+
+
+n = 7      
+
+m1 = [1]
+m2 = [1,2]
+m3 = [1,2,3]
+m4 = [1,2,3,4]                     #       <---------------------    depending on the we can choose which one we want to use
+m5 = [1,2,3,4,5]
+m6 = [1,2,3,4,5,6]
+m7 = [1,2,3,4,5,6,7]
+
+
+p = permutations(m6)
+lista_p = list(p)
+
+
+print(len(lista_p))
+for x in lista_p:
+    print(' '.join([str(i) for i in x]))
+    
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+8)IPRB
+
+
+
+k = 26      # homozygous dominant for a factor
+
+m = 21      # heterozygous
+
+n = 19      # homozygous recessive
+
+pop = k + m + n     # total population
+
+
+prob = (4*(k*(k-1)+(2*k*m)+(2*k*n)+(m*n))+(3*m)*(m-1))/((4*pop*(pop-1)))
+
+print(float(prob))
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+9)LEXF
+
+
+
+import itertools
+
+
+
+
+n =  
+
+m1 = ['A']
+m2 = ['A','B']
+m3 = ['A','B','C']
+m4 = ['A','B','C','D']                     #       <---------------------    depending on the request we can choose which one we want to use
+m5 = ['A','B','C','D','E']
+m6 = ['A','B','C','D','E','F']
+m7 = ['A','B','C','D','E','F','G']
+m8 = ['A','B','C','D','E','F','G','H']
+m9 = ['A','B','C','D','E','F','G','H','I']
+m10 = ['A','B','C','D','E','F','G','H','I','J']
+m_ex = ['A','C','G','T']
+
+lista_p = list(m7)
+
+
+
+for x in itertools.product(lista_p, repeat=n):
+    print(''.join([str(i) for i in x]))
+    
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+10)FIBD
+
+n = 
+
+m = 
+
+
+def _mortalFib_(n,m):
+    alive = [1, 1]
+    for i in range(2, n):
+        # first reproduction
+        offspring = alive[i - 1] + alive[i - 2]
+        # then death
+        if i == m:
+            offspring = offspring - 1
+        if i > m:
+            offspring = offspring - alive[i - m - 1]
+        alive.append(offspring)
+    return alive[-1]
+
+
+print(_mortalFib_(n,m))
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+11)PROT
+
+
+RNA = ''
+
+
+
+
+
+
+RNA_codon = {"UUU" : "F", "CUU" : "L", "AUU" : "I", "GUU" : "V",
+           "UUC" : "F", "CUC" : "L", "AUC" : "I", "GUC" : "V",
+           "UUA" : "L", "CUA" : "L", "AUA" : "I", "GUA" : "V",
+           "UUG" : "L", "CUG" : "L", "AUG" : "M", "GUG" : "V",
+           "UCU" : "S", "CCU" : "P", "ACU" : "T", "GCU" : "A",
+           "UCC" : "S", "CCC" : "P", "ACC" : "T", "GCC" : "A",
+           "UCA" : "S", "CCA" : "P", "ACA" : "T", "GCA" : "A",
+           "UCG" : "S", "CCG" : "P", "ACG" : "T", "GCG" : "A",
+           "UAU" : "Y", "CAU" : "H", "AAU" : "N", "GAU" : "D",
+           "UAC" : "Y", "CAC" : "H", "AAC" : "N", "GAC" : "D",
+           "UAA" : "STOP", "CAA" : "Q", "AAA" : "K", "GAA" : "E",
+           "UAG" : "STOP", "CAG" : "Q", "AAG" : "K", "GAG" : "E",
+           "UGU" : "C", "CGU" : "R", "AGU" : "S", "GGU" : "G",
+           "UGC" : "C", "CGC" : "R", "AGC" : "S", "GGC" : "G",
+           "UGA" : "STOP", "CGA" : "R", "AGA" : "R", "GGA" : "G",
+           "UGG" : "W", "CGG" : "R", "AGG" : "R", "GGG" : "G" 
+           }
+
+proteins = ""
+
+# Generate protein string
+for i in range(0, len(RNA)-(3+len(RNA)%3), 3):
+    if RNA_codon[RNA[i:i+3]] == "" :
+        break
+    proteins += RNA_codon[RNA[i:i+3]]
+
+# Print the protein string
+print ( proteins)
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+12) mRNA
+
+
+prot_seq =''
+
+
+RNA_codons = {"UUU" : "F", "CUU" : "L", "AUU" : "I", "GUU" : "V",
+           "UUC" : "F", "CUC" : "L", "AUC" : "I", "GUC" : "V",
+           "UUA" : "L", "CUA" : "L", "AUA" : "I", "GUA" : "V",
+           "UUG" : "L", "CUG" : "L", "AUG" : "M", "GUG" : "V",
+           "UCU" : "S", "CCU" : "P", "ACU" : "T", "GCU" : "A",
+           "UCC" : "S", "CCC" : "P", "ACC" : "T", "GCC" : "A",                         #<------------------------ needed to use the codons table in order to identify and translate the sequence
+           "UCA" : "S", "CCA" : "P", "ACA" : "T", "GCA" : "A",
+           "UCG" : "S", "CCG" : "P", "ACG" : "T", "GCG" : "A",
+           "UAU" : "Y", "CAU" : "H", "AAU" : "N", "GAU" : "D",
+           "UAC" : "Y", "CAC" : "H", "AAC" : "N", "GAC" : "D",
+           "UAA" : "STOP", "CAA" : "Q", "AAA" : "K", "GAA" : "E",
+           "UAG" : "STOP", "CAG" : "Q", "AAG" : "K", "GAG" : "E",
+           "UGU" : "C", "CGU" : "R", "AGU" : "S", "GGU" : "G",
+           "UGC" : "C", "CGC" : "R", "AGC" : "S", "GGC" : "G",
+           "UGA" : "STOP", "CGA" : "R", "AGA" : "R", "GGA" : "G",
+           "UGG" : "W", "CGG" : "R", "AGG" : "R", "GGG" : "G" 
+           }
+
+
+
+def codon_frequence():                                         
+    frequence = {}                                             
+    for x, i in RNA_codons.items():                                
+        if i not in frequence:                                 
+            frequence[i] = 0                                   
+        frequence[i] += 1                                      
+    return (frequence)                                         
+
+
+def different_sequences(sequence):                              
+    f = codon_frequence()                                      
+    n = f['STOP']                                              
+    for aa in sequence:                                        
+        n *= f[aa]                                             
+    return (n % 1000000)                                       
+
+
+                               
+
+print(different_sequences(prot_seq))
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+
+13) LIA
+
+import math                                                                    
+k =                                                                           
+N =                                                                           
+pop = 2**k                                                                       
+probability = 0                                                                
+for i in range(N, pop + 1):                                                      
+    prob = (math.factorial(pop) /                                                
+            (math.factorial(i) * math.factorial(pop - i))) * (0.25**i) * (0.75**(pop - i))                            
+    probability += prob                     
+
+
+
+print(probability)                                                             
+ 
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+
+14)3RD                   #technically the same programm used for other translation-like type  of exercises, with little to no changes
+
+
+
+pattern =''
+
+
+
+
+
+
+
+RNA_codon = {"UUU" : "F", "CUU" : "L", "AUU" : "I", "GUU" : "V",
+           "UUC" : "F", "CUC" : "L", "AUC" : "I", "GUC" : "V",
+           "UUA" : "L", "CUA" : "L", "AUA" : "I", "GUA" : "V",
+           "UUG" : "L", "CUG" : "L", "AUG" : "M", "GUG" : "V",
+           "UCU" : "S", "CCU" : "P", "ACU" : "T", "GCU" : "A",
+           "UCC" : "S", "CCC" : "P", "ACC" : "T", "GCC" : "A",
+           "UCA" : "S", "CCA" : "P", "ACA" : "T", "GCA" : "A",
+           "UCG" : "S", "CCG" : "P", "ACG" : "T", "GCG" : "A",
+           "UAU" : "Y", "CAU" : "H", "AAU" : "N", "GAU" : "D",
+           "UAC" : "Y", "CAC" : "H", "AAC" : "N", "GAC" : "D",
+           "UAA" : "STOP", "CAA" : "Q", "AAA" : "K", "GAA" : "E",
+           "UAG" : "STOP", "CAG" : "Q", "AAG" : "K", "GAG" : "E",
+           "UGU" : "C", "CGU" : "R", "AGU" : "S", "GGU" : "G",
+           "UGC" : "C", "CGC" : "R", "AGC" : "S", "GGC" : "G",
+           "UGA" : "STOP", "CGA" : "R", "AGA" : "R", "GGA" : "G",
+           "UGG" : "W", "CGG" : "R", "AGG" : "R", "GGG" : "G" 
+           }
+
+peptide = ""
+
+# Generate protein string
+for i in range(0, len(pattern)-(3+len(pattern)%3), 3):
+    if RNA_codon[pattern[i:i+3]] == "" :
+        break
+    peptide += RNA_codon[pattern[i:i+3]]
+
+# Print the protein string
+print ( peptide)
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+
+15) PRTM
+
+
+weights = {'A': 71.03711,             
+           'C': 103.00919,            
+           'D': 115.02694,            
+           'E': 129.04259,            
+           'F': 147.06841,            
+           'G': 57.02146,             
+           'H': 137.05891,            
+           'I': 113.08406,            
+           'K': 128.09496,            
+           'L': 113.08406,            
+           'M': 131.04049,            
+           'N': 114.04293,            #<-------------------------- all proteins weights
+           'P': 97.05276,             
+           'Q': 128.05858,            
+           'R': 156.10111,            
+           'S': 87.03203,             
+           'T': 101.04768,            
+           'V': 99.06841,             
+           'W': 186.07931,            
+           'Y': 163.06333}
+
+prot_seq = ''                      #<---------------------- insert the sequence to analize
+
+weight = sum(weights[p] for p in prot_seq)        
+
+print('%0.3f' % weight)  
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+16) PPER
+
+n = 90
+k = 8
+partial_perm = 1
+for i in range(k):
+    partial_perm *= (n - i)
+print(partial_perm % 1000000)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+17) LEXF
+
+
+import itertools                                  
+
+n = 4                                             
+
+s = ['H', 'U', 'P', 'M']                          
+
+
+perm = itertools.product(s, repeat=n)
+
+answer = []                                       
+
+for i, j in enumerate(list(perm)):                
+    permutation = ''                              
+    for item in j:                                
+        permutation += str(item)                  
+    answer.append(permutation)                    
+
+sorted_answer = sorted(answer)                    
+
+with open('answer.txt', 'a') as text_file:        
+    print(*sorted_answer, sep=' ', file=text_file)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+18) CONS
+from Bio import SeqIO
+    
+Am = []         
+Tm = []
+Gm = []
+Cm = []
+n = 0
+seq=[]
+for seq_record in SeqIO.parse("C:/Users/Chiara/OneDrive/notebook/Università/PoCS2/Rosalind 2/rosalind.fasta","fasta"):
+    seq.append(seq_record)
+
+for x in range(0,len(seq[0])):
+    A = 0
+    T = 0 
+    C = 0  
+    G = 0 
+    for i in seq:
+        nucleotide = i[x]
+        if nucleotide == 'C':
+                C += 1
+        elif nucleotide == 'G':
+                G += 1
+        elif nucleotide== 'A':
+                A += 1
+        else:
+                T += 1
+
+    Am.append(A)
+    Tm.append(T)
+    Gm.append(G)
+    Cm.append(C)
+    
+
+profile = ''
+for j in range(0, len(Am)):
+    maxval = max(Am[j],Cm[j],Gm[j],Tm[j])
+    if maxval == Am[j]:
+        profile = profile +'A'
+    elif maxval == Tm[j]:
+        profile = profile +'T'
+    elif maxval == Cm[j]:
+        profile = profile +'C'
+    else:
+        profile = profile +'G'
+
+
+print(profile)
+print('A:', *Am)
+print('C:', *Cm)
+print('G:', *Gm)
+print('T:', *Tm)
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+19) GC
+
+from Bio import SeqIO
+
+CG = 0 
+Dict = dict()
+for seq_record in SeqIO.parse("c:/Users/Utente/Desktop/Università/PoCS2/Rosalind 1/rosalind_gc(3).fasta", "fasta"):
+    for nucleotide in seq_record:
+        if nucleotide == 'C':
+            CG += 1
+        if nucleotide == 'G':
+            CG += 1
+           
+    per = ((CG/len(seq_record))*100)
+    Dict[seq_record.id] = per
+    CG = 0 
+
+
+all_per = Dict.values() #to get the max value of the dictionary
+per_max = max(all_per)
+
+#print key and value required
+for key,value in Dict.items():
+    if value == per_max:
+         print(key, per_max)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+20) LCSM 
+dna = ' [X] '
+substring =' [X] '                                        # [X] = insert right data
+
+start = 0
+while True:
+    start = dna.find(substring, start)
+    if start == -1: break
+    print( start+1)
+    start += 1
+   
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+21) MPRT
+
+import sys 
+import requests
+
+url = 'https://www.uniprot.org/uniprot/'
+ 
+with open("C:/Users/Andrea/OneDrive/notebook/Università/PoCS2/Rosalind/rosalind.fasta") as file:      
+    seqIDs = file.read().replace("\n", " ").split()              
+sequences = {}
+
+
+for proID in seqIDs:                                           
+    goToURL = url+proID+".fasta"
+    response = requests.get(goToURL)
+    sequences[proID] = (response.text.split("\n"))
+    sequences[proID] = "".join(sequences[proID][1::])
+
+def N_gly_motif(ID, sequence):                                   
+    sequence = list(sequence)
+    global result
+    result = []
+    for i in range(0, len(sequence)-3):
+        seq = sequence[i:i+4]
+        if (seq[0] == "N") and  (seq[1]!= "P") and  (seq[2] == "S" or seq[2] == "T") and (seq[3] != "P"):  
+            result.append(i+1)
+
+for key, value in sequences.items():                           
+    N_gly_motif(key, value)
+    if not result:
+        continue
+    else:
+        print(key)
+        print(*result)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+22) REVP
+
+from Bio import SeqIO    
+
+record = SeqIO.read('C:/Users/Andrea/OneDrive/notebook/Università/PoCS2/Rosalind/rosalind.fasta', 'fasta')
+dna = str(record.seq)
+dnaReverse = str(record.seq.complement())                   
+for i in range(len(dna)):
+    for j in range(i,len(dna)):
+        nucleotide = dna[i:j+1]
+        reverseNuc = dnaReverse[i:j+1]
+        if len(nucleotide) >= 4 and len(nucleotide) <= 12: 
+            if nucleotide == reverseNuc [::-1]:
+                print(i+1, len(nucleotide))
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+23)  LGIS
+
+from importlib.resources import open_text
+from math import perm
+
+
+n = 5
+#f = open_text('')
+
+permutation = list(('5 1 4 2 3').replace(' ', ''))
+
+increasePerm = []
+decreasePerm = []
+Max = max(permutation)
+Min =  min(permutation)
+
+increasePerm.append(Min)
+decreasePerm.append(Max)
+
+def Increase(permutation):
+    start = permutation.index(Min)
+    end = n
+    i = start
+    while i < n-1:
+        tempMin = permutation[i+1]
+        for j in range(i+1,end):
+            if tempMin>=permutation[j]:
+                i=j
+                tempMin = permutation[j]
+
+        increasePerm.append(tempMin)
+        return increasePerm
+
+#decrease
+start = permutation.index(Max)
+end = n
+i = start
+
+while i < n-1:
+    tempMin = permutation[i]
+    lista=[]
+    for j in range(i+1,end):
+        if tempMin>permutation[j]:
+            tempMin= permutation[j]
+            lista.append(permutation[j])
+            i=j
+        
+    decreasePerm.append(lista)
+
+
+print(increasePerm(permutation),decreasePerm)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+24) GRPH
+
+from Bio import SeqIO
+
+
+for seq_record in SeqIO.parse("C:/Users/Andrea/Downloads/rosalind_graph.fasta","fasta"):
+    for seq_record2 in SeqIO.parse("C:/Users/Andrea/Downloads/rosalind_graph.fasta","fasta"):
+        k = 3
+        last = seq_record [-k : ] 
+        first = seq_record2 [:k ]
+        if first.seq    == last.seq:
+            if seq_record.id != seq_record2.id:
+                print(seq_record.id + ' '+seq_record2.id)
+    
+   
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+25) ORF
+
+from dataclasses import replace
+
+
+triple = dict()
+
+triple = {'TTT':'F',
+'CTT':'L',
+'ATT':'I',
+'GTT':'V',
+'TTC':'F',
+'CTC':'L',
+'ATC':'I',
+'GTC':'V',
+'TTA':'L',
+'CTA':'L',
+'ATA':'I',
+'GTA':'V',
+'TTG':'L',
+'CTG':'L',
+'ATG':'M',
+'GTG':'V',
+'TCT':'S',
+'CCT':'P',
+'ACT':'T',
+'GCT':'A',
+'TCC':'S',
+'CCC':'P',
+'ACC':'T',
+'GCC':'A',
+'TCA':'S',
+'CCA':'P',
+'ACA':'T',
+'GCA':'A',
+'TCG':'S',
+'CCG':'P',
+'ACG':'T',
+'GCG':'A',
+'TAT':'Y',
+'CAT':'H',
+'AAT':'N',
+'GAT':'D',
+'TAC':'Y',
+'CAC':'H',
+'AAC':'N',
+'GAC':'D',
+'TAA':'Stop',
+'CAA':'Q',
+'AAA':'K',
+'GAA':'E',
+'TAG':'Stop',
+'CAG':'Q',
+'AAG':'K',
+'GAG':'E',
+'TGT':'C',
+'CGT':'R',
+'AGT':'S',
+'GGT':'G',
+'TGC':'C',
+'CGC':'R',
+'AGC':'S',
+'GGC':'G',
+'TGA':'Stop',
+'CGA':'R',
+'AGA':'R',
+'GGA':'G',
+'TGG':'W',
+'CGG':'R',
+'AGG':'R',
+'GGG':'G'}
+
+
+DNA = '[X]'
+
+
+def ORF (DNA):                  
+    n = 0
+    out = ''
+    len_dna = len(DNA)
+    out_dna = []
+    while n <= len_dna: 
+        substring = DNA[n:n+3]              
+        value = triple.get(substring)                          
+    
+        if substring == 'ATG':                                 
+            for i in range(n,len_dna,3):
+                value_triple = triple.get(DNA[i:i+3])
+                if value_triple == "Stop":                     
+                    break
+                if value_triple:
+                    out += value_triple
+            if value_triple and value_triple  =="Stop":
+                out_dna.append(out)                            
+            out=''
+        n += 1
+    return out_dna
+
+def Complement (DNA):                                           
+    new_DNA = ''
+    for nucleotide in DNA:
+        if nucleotide == 'T':
+            new_dna += 'A'
+        if nucleotide == 'C':
+            new_dna += 'G'
+        if nucleotide == 'A':
+            new_dna += 'T'    
+        if nucleotide == 'G': 
+            new_dna += 'C'
+    
+        DNA  = new_DNA                        
+    return DNA
+
+
+print('\n'.join(set(ORF(DNA)+ORF(Complement(DNA[::-1])))) )

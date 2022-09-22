@@ -1,0 +1,709 @@
+							PYTHON PART
+
+1)SAY "HELLO,WORLD!"  
+          print("Hello,World!")
+
+
+2) IF-ELSE 
+    
+if __name__ == '__main__':
+    n = int(input().strip())
+if n % 2 == 0 :
+    if n in range (2,6) :
+        print('Not Weird')
+    elif n in range(6,21) :
+            print('Weird')
+    elif n > 20 :
+        print('Not Weird')
+else :
+    print('Weird')
+
+
+3)ARITMETIC OPERATORS
+        if __name__ == '__main__':
+    		a = int(input())
+    		b = int(input())
+    
+    		c = a + b
+    		d = a - b
+    		e = a * b
+
+    		print(c)
+    		print(d)
+    		print(e)
+
+
+
+4)DIVISION 
+      if __name__ == '__main__':
+    	a = int(input())
+    	b = int(input())
+
+	n = a//b
+
+	m = a/b 
+
+	print(n)
+	print(m)
+
+
+
+5)LOOPS
+
+	if __name__ == '__main__':
+    	n = int(input())
+    	[print(i**2) for i in range(n)]
+
+
+6)LIST COMPREHENSION
+	if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    
+    c = x+y+z 
+    
+	lista = []
+
+
+	for a in range(x+1) :
+    		for b in range (y+1):
+        		for d in range(z+1):
+            			if a + b + d !=n :
+                			lista.append([a,b,d])
+	print(lista)
+
+
+7)FIND THE RUNNER-UP SCORE
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+
+    
+   
+
+
+    lista = []
+    for item in arr:
+       lista.append(item) 
+    
+    maxItem = max(lista)
+
+    limit = -9999999
+    for number in range(0,n):
+    
+        if lista[number]<maxItem and lista[number] > limit:
+            limit = lista[number]
+            
+    print(limit)
+
+
+
+
+8)FINDING THE PERCENTAGE
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    
+    
+    query_scores = student_marks[query_name]
+    
+    total_scores = sum(query_scores)
+    
+    float(total_scores)
+    
+    average =float(total_scores/3.00)
+    
+    
+print('%.2f' % average)
+
+
+
+
+
+9)TUPLES
+
+if __name__ == '__main__':
+    n = int(raw_input())
+    integer_list = map(int, raw_input().split())
+
+
+
+10)LISTS
+
+	f __name__ == '__main__':
+    N = int(raw_input())
+    list_N = []
+    
+    list_N.insert(0,5)
+    list_N.insert(1,10)
+    list_N.insert(0,6)
+    print(list_N)
+    list_N.remove(6)
+    list_N.append(9)
+    list_N.append(1)
+    list_N.sort()
+    print(list_N)
+    list_N.pop()
+    list_N.reverse()
+    print(list_N)
+
+
+
+11)SWAP CASE
+
+
+	def swap_case(s):
+    		return
+
+if __name__ == '__main__':
+    s = raw_input()
+    result = swap_case(s)
+    print result
+
+
+
+
+
+12)SPLIT AND JOIN
+
+def split_and_join(line):
+    # write your code here
+    line = line.split(" ")
+    
+    line = "-".join(line)
+    return line
+    
+
+
+13)WHAT'S YOUR NAME
+def print_full_name(first, last):
+    # Write your code here
+    print("Hello {} {}! You just delved into python.".format(first,last))
+
+
+
+14)FIND A STRING
+
+def count_substring(string, sub_string):
+    count = 0
+    for i in range(0, len(string)-len(sub_string)+1):
+        l = i
+        for j in range(0, len(sub_string)):
+            if string[l] == sub_string[j]:
+                l +=1
+                if j == len(sub_string)-1:
+                    count = count + 1
+                else:
+                    continue
+            else:
+                break
+    return count
+
+
+
+
+15)INTRODUCTION TO SETS
+
+def average(array):
+    return sum(set(arr)) / len(set(arr))
+     
+
+16)SET .ADD()
+
+x = set()
+[x.add(input()) for stamps in range(int(input())) ] 
+print(len(x))
+
+
+
+17)SET .UNION()
+
+a = int(input())
+b = list(input().split())
+
+c = int(input())
+d = list(input().split())
+
+set1 =set(b)
+set2 =set(d)
+
+print(len(set1.union(set2))) 
+
+
+
+
+
+18)SET .DIFFERENCE()
+
+a = int(input())
+b = list(input().split())
+
+c = int(input())
+d = list(input().split())
+
+s1 = set(b)
+s2 = set(d)
+print(len(s1.difference(s2)))
+
+
+
+
+19)POLAR COORDINATES
+
+import  cmath
+
+print(*cmath.polar(complex(input())), sep = '\n')
+
+
+
+
+20)MOD DIVMOD
+
+a = int(input())
+b = int(input())
+
+g = a//b
+g1 = a%b
+g2 = divmod(a,b)
+
+print(g,g1,g2, sep='\n')
+
+
+
+
+21)MOD POWERMOD
+
+import cmath
+
+a = int(input())
+b = int(input())
+m = int(input())
+
+g = pow(a,b)
+d = pow(a,b,m)
+print(g,d, sep ='\n')
+
+
+
+
+22)INTEGERS COME IN ALL SIZES
+
+import cmath
+
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+
+g = a**b
+h = c**d
+
+result= g+h
+
+print(result)
+
+
+
+
+23)ITERTOOLS PRODUCT
+
+from itertools import product
+
+lista= []
+
+
+A = map(int, input().split())
+B = map(int, input().split())
+
+print(*product(A,B))
+
+
+24)ITERTOOLS PERMUTATIONS
+
+from itertools import permutations
+
+k = input().split()
+
+S = ''.join(sorted(k[0]))
+
+n = int(k[1])
+
+g = list(permutations(S,n))
+
+for i in g :
+    print(''.join(i))
+
+
+
+25)ITERTOOLS COMBINATION_WITH_REPLACEMENT
+
+from itertools import combinations_with_replacement
+s, n = input().split()
+print(*[''.join(i) for i in combinations_with_replacement(sorted(s), int(n))], sep="\n")
+
+
+
+
+
+26)COLLECTIONS COUNTER
+
+from collections import Counter
+
+numscarpe = int(input())
+scarpe = Counter(map(int, input().split()))
+numcliente = int(input())
+
+
+guadagno = 0
+
+for x in range(numcliente):
+    taglia, costo = map(int, input().split())
+    if scarpe[taglia]:
+        guadagno += costo
+        scarpe[taglia] -= 1
+        
+print(guadagno)
+
+
+
+27)DEFAULTDICT TUTORIAL
+
+from collections import defaultdict
+
+lista = []
+d = defaultdict(list)
+
+n,m = map(int, input().split())
+
+for x in range (1, n+1) :
+    d[input()].append(str(x))
+    
+for x in range(m):
+    g = input()
+    if g in d:
+        print(' '.join(d[g]))
+    else :
+        print (-1)
+
+
+
+
+28)COLLECTIONS ORDEREDDICT
+
+from collections import OrderedDict
+
+
+ordered_dict = OrderedDict()
+
+for x in range(int(input())) :
+    oggetto, spazio, quantit = input().rpartition(' ')
+    ordered_dict[oggetto] = ordered_dict.get(oggetto, 0) + int(quantit)
+for oggetto, quantit in ordered_dict.items():
+    print(oggetto, quantit)
+
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+							ALGORITHMS PART
+
+
+
+
+29)SOLVE ME FISRT
+
+def solveMeFirst(a,b):
+	# Hint: Type return a+b below
+    a+b
+    return a+b
+
+num1 = int(input())
+num2 = int(input())
+res = solveMeFirst(num1,num2)
+print(res)
+
+
+
+30)SIMPLE ARRAY
+
+def simpleArraySum(ar):
+    # Write your code here
+     x=0
+     for i in range(0,ar_count):
+        x = x + ar[i]
+     return x
+
+
+31)COMPARE THE TRIPLETS
+
+def compareTriplets(a, b):
+    # Write your code here
+    
+    
+    lista = []
+    
+    Alice = 0
+    
+    Bob = 0
+    
+    for i in range(0,len(a)):
+        if a[i] < b[i]:
+            Bob += 1
+        elif a[i] > b[i]:
+            Alice += 1
+        else:
+            Alice += 0
+            Bob += 0
+    lista.append(Alice)
+    lista.append(Bob)
+    
+    return lista
+
+
+
+32)A VERY BIG SUM
+
+def aVeryBigSum(ar):
+    # Write your code here
+    n = 0
+    
+    for i in range(0,len(ar)):
+        n= n + ar[i]
+    return n
+    
+
+
+33)STAIRCASE
+
+def staircase(n):
+    # Write your code here
+    for i in range(0,n):
+        for j in range(0,n):
+            if j+i >= n-1:
+                print("#",end='') 
+            else:
+                print(" ",end='')
+        print("\r")
+
+
+
+34)MINI-MAX SUM
+
+def miniMaxSum(arr):
+    # Write your code here
+    arr.sort()
+    x = [None]*int(len(arr)-3)
+    for y in range(0,len(arr)-3):
+        somma = 0
+        for j in range(y,y+4):
+            somma = somma + arr[j]
+        x[y] = somma
+    
+
+
+
+35)CEASER CIPHER
+
+def caesarCipher(s, k):
+    # Write your code here
+    ciphered_message = ""
+    for characters in s:
+        char_value = ord(characters)
+        if (char_value < 65 or char_value > 90) and (char_value < 97 or char_value > 122) :
+            char_value = char_value
+        else: 
+            if characters.islower():
+                first_letter = ord('a')
+            else:
+                first_letter = ord('A')
+
+            char_value = ((ord(characters) - first_letter + k) % 26 ) + first_letter
+        ciphered_message = ciphered_message + chr(char_value)
+        
+        
+    return ciphered_message
+
+
+
+36)ALTERNAING CHARACTERS
+
+def alternatingCharacters(s):
+    # Write your code here
+    
+    for _ in range(0,len(s)):
+        count = 0;
+    for i in range(0,len(s) - 1):
+        if s[i] == s[i + 1]:
+            count += 1
+    print(count)
+    return count
+
+
+
+37)LOCE-LETTER MISTERY
+
+def theLoveLetterMystery(s):
+    # Write your code here
+    
+    i = 0
+    counter = 0
+    while(i<int(len(s)/2)):
+        counter += abs(ord(s[i])-ord(s[len(s)-i-1]))
+        i += 1
+    return counter
+
+
+38) GAME OF THRONES 1
+
+from collections import Counter
+def gameOfThrones(s):
+    # Write your code here
+    x = Counter(s)
+    counter = 0
+    
+    for i,j in x.items():
+        if j%2 !=0:
+            counter+=1
+    if counter == 1 or counter == 0:
+        return 'YES'
+    else:
+        return 'NO'
+
+
+39)BIG SORTING
+
+
+def bigSorting(unsorted):
+    
+    return sorted(unsorted, key = int)
+    
+
+40)INTRO TO TUTORIAL CHALLENGES
+
+def introTutorial(V, arr):
+    x = arr.index(V)
+    
+    print(x)
+    return x
+
+
+
+41)INSERTION SORT PART1
+
+def insertionSort1(n, arr):
+    # Write your code here
+    
+    x = arr[-1]
+    idx = n-2
+
+    while (x < arr[idx]) and (idx >= 0):
+        arr[idx+1] = arr[idx]
+        print(*arr)
+        idx -= 1
+
+    arr[idx+1] = x
+    print(*arr)
+
+
+
+42)CORRECTNESS AND LOOP VARIANT
+
+def insertion_sort(l):
+    for i in range(1, len(l)):
+        j = i-1
+        key = l[i]
+        while (j > 0) and (l[j] > key):
+           l[j+1] = l[j]
+           j -= 1
+        l[j+1] = key
+
+m = int(input().strip())
+ar = [int(i) for i in input().strip().split()]
+insertion_sort(ar)
+ar.sort()
+print(" ".join(map(str,ar)))
+
+
+
+
+
+43)RUNNING TIME OF ALFORITHMS
+
+def runningTime(arr):
+    # Write your code here
+    if len(arr) <= 1:
+        print(0)
+        return (arr)
+    else:
+        shifts = 0
+        
+        for j in range(1, len(arr)):
+            for i in reversed(range(j)):
+                if arr[i + 1] < arr[i]:
+                    arr[i], arr[i + 1] = arr[i + 1], arr[i]
+                    shifts += 1
+                else:
+                    break
+        
+        return shifts
+
+
+
+
+44)QUICKSORT 1  PARTITION
+
+def quickSort(arr):
+    # Write your code here
+    
+    p = arr[0]
+    left = []
+    equal = []
+    right = []
+    
+    for element in arr:
+        if element < p:
+            left.append(element)
+        elif element > p:
+            right.append(element)
+        else :
+            equal.append(element)
+    
+
+    lista1 = left + equal + right
+    
+    return lista1
+    
+
+
+45)COUNTING SORT 1
+
+from collections import Counter
+def countingSort(arr):
+    # Write your code here
+    tot = [0]*100
+
+    for j in range(0,n):
+        temp = arr[j]
+        tot[temp] += 1
+    print(*tot, sep =' ')
+    return tot
+
+
+46)FIND THE MEDIAN
+
+def findMedian(arr):
+    # Write your code here
+    arr.sort()
+    x = median(arr)
+    print(x)
+    return x
+
